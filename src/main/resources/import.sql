@@ -44,13 +44,13 @@ INSERT INTO productos (id, nombre, precio, create_at) VALUES(7, 'Mica Comoda 5 C
  
 /* Creamos algunas facturas */
 INSERT INTO facturas (id, descripcion, observacion, cliente_id, create_at) VALUES(1, 'Factura equipos de oficina', null, 1, NOW());
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 1);
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(2, 1, 4);
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 5);
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 7);
+INSERT INTO facturas_items (id,cantidad, factura_id, producto_id) VALUES(1,1, 1, 1);
+INSERT INTO facturas_items (id,cantidad, factura_id, producto_id) VALUES(2,2, 1, 4);
+INSERT INTO facturas_items (id,cantidad, factura_id, producto_id) VALUES(3,1, 1, 5);
+INSERT INTO facturas_items (id,cantidad, factura_id, producto_id) VALUES(4,1, 1, 7);
  
 INSERT INTO facturas (id, descripcion, observacion, cliente_id, create_at) VALUES(2, 'Factura Bicicleta', 'Alguna nota importante!', 1, NOW());
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(3, 2, 6);
+INSERT INTO facturas_items (id,cantidad, factura_id, producto_id) VALUES(5,3, 2, 6);
  
 /* Creamos algunos usuarios con sus roles */
 INSERT INTO usuarios (id, username, password, enabled) VALUES (1, 'andres','$2a$10$O9wxmH/AeyZZzIS09Wp8YOEMvFnbRVJ8B4dmAMVSGloR62lj.yqXG',1);
@@ -60,8 +60,8 @@ INSERT INTO usuarios (id, username, password, enabled) VALUES (2, 'admin','$2a$1
 
 
 
-INSERT INTO roles (nombre) VALUES ('ROLE_USER');
-INSERT INTO roles (nombre) VALUES ('ROLE_ADMIN');
+INSERT INTO roles (id,nombre) VALUES (1,'ROLE_USER');
+INSERT INTO roles (id,nombre) VALUES (2,'ROLE_ADMIN');
 
 INSERT INTO users_authorities (user_id, role_id) VALUES (1, 1);
 INSERT INTO users_authorities (user_id, role_id) VALUES (2, 2);
