@@ -25,7 +25,7 @@ INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VAL
 INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(16, 'Janie', 'Doe', 'janie.doe@gmail.com', '2017-08-16', '',1);
 INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(17, 'Phillip', 'Webb', 'phillip.webb@gmail.com', '2017-08-17', '',1);
 INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(18, 'Stephane', 'Nicoll', 'stephane.nicoll@gmail.com', '2017-08-18', '',1);
-INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(19, 'Sam', 'Brannen', 'sam.brannen@gmail.com', '2017-08-19', '');  
+INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(19, 'Sam', 'Brannen', 'sam.brannen@gmail.com', '2017-08-19', '',1);  
 INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(20, 'Juergen', 'Hoeller', 'juergen.Hoeller@gmail.com', '2017-08-20', '',1); 
 INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(21, 'Janie', 'Roe', 'janie.roe@gmail.com', '2017-08-21', '',1);
 INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(22, 'John', 'Smith', 'john.smith@gmail.com', '2017-08-22', '',1);
@@ -53,9 +53,16 @@ INSERT INTO facturas (id, descripcion, observacion, cliente_id, create_at) VALUE
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(3, 2, 6);
  
 /* Creamos algunos usuarios con sus roles */
-INSERT INTO users (id, username, password, enabled) VALUES (1, 'andres','$2a$10$O9wxmH/AeyZZzIS09Wp8YOEMvFnbRVJ8B4dmAMVSGloR62lj.yqXG',1);
-INSERT INTO users (id, username, password, enabled) VALUES (2, 'admin','$2a$10$DOMDxjYyfZ/e7RcBfUpzqeaCs8pLgcizuiQWXPkU35nOhZlFcE9MS',1);
+INSERT INTO usuarios (id, username, password, enabled) VALUES (1, 'andres','$2a$10$O9wxmH/AeyZZzIS09Wp8YOEMvFnbRVJ8B4dmAMVSGloR62lj.yqXG',1);
+INSERT INTO usuarios (id, username, password, enabled) VALUES (2, 'admin','$2a$10$DOMDxjYyfZ/e7RcBfUpzqeaCs8pLgcizuiQWXPkU35nOhZlFcE9MS',1);
  
-INSERT INTO authorities (user_id, authority) VALUES (1,'ROLE_USER');
-INSERT INTO authorities (user_id, authority) VALUES (2,'ROLE_ADMIN');
-INSERT INTO authorities (user_id, authority) VALUES (2,'ROLE_USER'); 
+
+
+
+
+INSERT INTO roles (nombre) VALUES ('ROLE_USER');
+INSERT INTO roles (nombre) VALUES ('ROLE_ADMIN');
+
+INSERT INTO users_authorities (user_id, role_id) VALUES (1, 1);
+INSERT INTO users_authorities (user_id, role_id) VALUES (2, 2);
+INSERT INTO users_authorities (user_id, role_id) VALUES (2, 1);
