@@ -1,10 +1,10 @@
-INSERT INTO REGIONES (id, nombre) VALUES (1,'Sudamerica');
-INSERT INTO REGIONES (id, nombre) VALUES (2,'Centroamerica');
-INSERT INTO REGIONES (id, nombre) VALUES (3,'Norteamerica');
-INSERT INTO REGIONES (id, nombre) VALUES (4,'Europa');
-INSERT INTO REGIONES (id, nombre) VALUES (5,'Asia');
-INSERT INTO REGIONES (id, nombre) VALUES (6,'Africa');
-INSERT INTO REGIONES (id, nombre) VALUES (7,'Oceania');
+INSERT INTO regiones (id, nombre) VALUES (1,'Sudamerica');
+INSERT INTO regiones (id, nombre) VALUES (2,'Centroamerica');
+INSERT INTO regiones (id, nombre) VALUES (3,'Norteamerica');
+INSERT INTO regiones (id, nombre) VALUES (4,'Europa');
+INSERT INTO regiones (id, nombre) VALUES (5,'Asia');
+INSERT INTO regiones (id, nombre) VALUES (6,'Africa');
+INSERT INTO regiones (id, nombre) VALUES (7,'Oceania');
 
 
 INSERT INTO clientes (id, nombre, apellido, email, createat, foto,region_id) VALUES(1, 'Andres', 'Guzman', 'profesor@bolsadeideas.com', '2017-08-01', '',1);
